@@ -20,7 +20,7 @@ const Reviews = () => {
   useEffect(() => {
     const fetchReviews = async () => {
       try {
-        const response = await axios.get("https://api.boom-avto.co/rivew/");
+        const response = await axios.get("https://api.boomavto.ru/rivew/");
         setReviews(response.data.results);
       } catch (error) {
         console.error("Failed to fetch reviews:", error);

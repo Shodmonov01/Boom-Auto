@@ -17,7 +17,7 @@ const LeaveReview = ({ acitve }) => {
 
     try {
       const response = await axios.post(
-        "https://api.boom-avto.co/review/sayt/",
+        "https://api.boomavto.ru/review/sayt/",
         {
           name,
           comment: reviewText,

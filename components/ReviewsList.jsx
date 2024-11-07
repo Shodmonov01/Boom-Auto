@@ -13,7 +13,7 @@ const ReviewsList = () => {
     const fetchReviews = async () => {
       try {
         const response = await axios.get(
-          "https://api.boom-avto.co/review/sayt/"
+          "https://api.boomavto.ru/review/sayt/"
         );
         setReviews(response.data.results);
       } catch (err) {
