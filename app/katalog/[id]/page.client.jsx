@@ -45,16 +45,18 @@ const ClientPage = ({ newsData }) => {
     },
   ];
 
-  useEffect(() => {
-    setPriceStore(sessionStorage.getItem("selectedCurrency"));
-  });
-
+  
   const pathname = usePathname();
   const lastSegment = pathname.split("/").pop();
   const [cardCarData1, setCardCarData] = useState(newsData || {});
   const [modalOpen, setModalOpen] = useState(false);
-
+  
   const [saved, setSaved] = useState(cardCarData[0].savedcar);
+  useEffect(() => {
+    setPriceStore(sessionStorage.getItem("selectedCurrency"));
+  });
+
+  
   return (
     <div className="container mb-[100px] max-md:mb-[60px]">
       <Modal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
