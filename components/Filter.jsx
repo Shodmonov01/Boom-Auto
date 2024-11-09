@@ -247,14 +247,16 @@ const Filter = ({ btn }) => {
               />
             </div>
             <div className="flex flex-wrap mt-5 rounded-[5px] justify-between max-md:flex-wrap">
-              <div className="flex w-full md:flex-col my-4 max-md:w-full">
+              <div className="flex w-full flex-col my-4 max-md:w-full">
                 {" "}
-                <SelectCars
-                  onCategoryChange={handleCategoryChange}
-                  onDistrictChange={handleDistrictChange}
-                  onGenerationChange={handleGenerationChange}
-                />
-                <div className="flex flex-col justify-between px-[30px]">
+                <div className="md:px-[0px] px-[15px]">
+                  <SelectCars
+                    onCategoryChange={handleCategoryChange}
+                    onDistrictChange={handleDistrictChange}
+                    onGenerationChange={handleGenerationChange}
+                  />
+                </div>
+                <div className="flex flex-col justify-between md:px-[30px] px-[5px]">
                   {/* <FuelSelect onFuelChange={handleFuelChange} /> */}
                   <ConfigurationSelect
                     onConfigurationChange={handleConfigurationChange}

@@ -155,15 +155,16 @@ const SelectCars = ({
   // Return qismi keltiriladi
 
   return (
-    <div className="flex md:justify-between max-md:justify-around relative px-[30px] max-md:px-0 max-md:w-full flex-col">
+    <div className="flex md:justify-between max-md:justify-around relative px-[30px]  max-md:px-0 max-md:w-full flex-col">
       <div className="flex w-full max-md:w-full" ref={categoryRef}>
         <div
-          className={`flex flex-col px-[10px]  w-full max-md:w-[120px] rounded-[10px] justify-between cursor-pointer`}
+          className={` md:px-[10px]  w-full rounded-[10px] justify-between cursor-pointer`}
           onClick={toggleCategory}
         >
           <h2 className="text-lg text-[#050B20] max-md:text-sm max-md:capitalize">
-            <span className="max-md:hidden">Выберите</span>&nbsp;марку
+            <span className="max-md:hidden">Выберите</span> марку
           </h2>
+
           <div className="flex justify-between w-full my-2 items-center">
             <p className="text-sm text-[#050B20] line-clamp-1">
               {selectedCategory}
@@ -214,14 +215,14 @@ const SelectCars = ({
       </div>
 
       {/* District (Model) Select */}
-      <div className="flex flex-col md:px-[10px] w-full max-md:w-full rounded-[10px] justify-between cursor-pointer md:mt-5 md:mb-8  max-md:ml-2">
+      <div className="flex flex-col md:px-[10px]  w-full max-md:w-full rounded-[10px] justify-between cursor-pointer md:mt-5 md:mb-8  max-md:ml-0">
         <div className="flex flex-col w-full" ref={districtRef}>
           <div
-            className={`flex flex-col md:h-10 w-full max-md:w-[90px] rounded-[10px] justify-between cursor-pointer`}
+            className={`md:h-10 w-full max-md:w-full rounded-[10px] justify-between cursor-pointer`}
             onClick={toggleDistrict}
           >
             <h2 className="text-lg text-[#050B20] max-md:text-sm max-md:capitalize">
-              <span className="max-md:hidden">Выберите</span>&nbsp;модель
+              <span className="max-md:hidden">Выберите</span> модель
             </h2>
             {selectedCategory && (
               <div className="flex justify-between w-full my-2 items-center">
@@ -276,10 +277,10 @@ const SelectCars = ({
       </div>
 
       {/* Generation Select */}
-      <div className="flex flex-col md:px-[10px] w-full max-md:w-full rounded-[10px] justify-between cursor-pointer md:mb-8  max-md:ml-2 ">
+      <div className="flex flex-col md:px-[10px]  w-full max-md:w-full rounded-[10px] justify-between cursor-pointer md:mt-5 md:mb-8  max-md:ml-0">
         <div className="flex flex-col w-full" ref={generationRef}>
           <div
-            className={`flex flex-col md:h-10 w-full max-md:w-[90px] rounded-[10px] justify-between cursor-pointer`}
+            className={`flex flex-col md:h-10 w-full max-md:w-full rounded-[10px] justify-between cursor-pointer`}
             onClick={toggleGeneration}
           >
             <h2 className="text-lg text-[#050B20] max-md:text-sm">Поколение</h2>
