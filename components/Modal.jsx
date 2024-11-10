@@ -5,7 +5,7 @@ const Modal = ({ isOpen, onClose }) => {
   const [formData, setFormData] = useState({
     name: "",
     // last_name: "",
-    phone: "",
+    phone: "+8210",
     // email: "",
     // discription: "",
   });
@@ -14,6 +14,10 @@ const Modal = ({ isOpen, onClose }) => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+    if (name === "phone") {
+      // Ограничение на изменение первых 5 символов
+      if (!value.startsWith("+8210")) return;
+    }
     setFormData({
       ...formData,
       [name]: value,
@@ -23,10 +27,8 @@ const Modal = ({ isOpen, onClose }) => {
   const validate = () => {
     const newErrors = {};
     if (!formData.name) newErrors.name = "Имя обязательно";
-    // if (!formData.last_name) newErrors.last_name = "Фамилия обязательно";
     if (!formData.phone) newErrors.phone = "Телефон обязателен";
-    // if (!formData.email) newErrors.email = "Электронная почта обязательна";
-    // if (!formData.discription) newErrors.discription = "Сообщение обязательно";
+
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -39,10 +41,8 @@ const Modal = ({ isOpen, onClose }) => {
       setMessage("Заявка отправлена!");
       setFormData({
         name: "",
-        // last_name: "",
+
         phone: "",
-        // email: "",
-        // discription: "",
       });
       setTimeout(onClose, 2000); // Modalni 2 sekunddan keyin yopish
       setTimeout(() => {
@@ -77,16 +77,6 @@ const Modal = ({ isOpen, onClose }) => {
           />
           {errors.name && <p className="error-message">{errors.name}</p>}
 
-          {/* <input
-            type="text"
-            name="last_name"
-            placeholder="Фамилия"
-            value={formData.last_name}
-            onChange={handleChange}
-          />
-          {errors.last_name && (
-            <p className="error-message">{errors.last_name}</p>
-          )} */}
           <p className="text-xs text-[#ACACAC] mb-1 mt-3 font-semibold">
             Номер телефона
           </p>
@@ -100,25 +90,6 @@ const Modal = ({ isOpen, onClose }) => {
             maxLength={14}
           />
           {errors.phone && <p className="error-message">{errors.phone}</p>}
-
-          {/* <input
-            type="email"
-            name="email"
-            placeholder="Электронная почта"
-            value={formData.email}
-            onChange={handleChange}
-          />
-          {errors.email && <p className="error-message">{errors.email}</p>}
-
-          <textarea
-            name="discription"
-            placeholder="Сообщение"
-            value={formData.discription}
-            onChange={handleChange}
-          ></textarea>
-          {errors.discription && (
-            <p className="error-message">{errors.discription}</p>
-          )} */}
 
           <button type="submit" className="text-xs h-[70px] mt-8">
             Оставить заявку
