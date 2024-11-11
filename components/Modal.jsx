@@ -86,8 +86,8 @@ const Modal = ({ isOpen, onClose }) => {
             placeholder="+8210-____-____"
             value={formData.phone}
             onChange={handleChange}
-            minLength={14}
-            maxLength={14}
+            minLength={13}
+            maxLength={13}
           />
           {errors.phone && <p className="error-message">{errors.phone}</p>}
 

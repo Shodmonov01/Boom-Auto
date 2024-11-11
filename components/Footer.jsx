@@ -193,9 +193,9 @@ export default function Footer() {
                   )}
                   <p className="flex flex-col cursor-pointer">
                     <span className="text-nowrap" ref={textRef}>
-                      경기 수원시 권선구 권선로 308-5
+                      경기 수원시 권선구 권선로 308-5 Южная Корея, г. Сувон
                     </span>
-                    <span className="text-nowrap">Южная Корея, г. Сувон</span>
+                    {/* <span className="text-nowrap">Южная Корея, г. Сувон</span> */}
                   </p>
                 </div>
                 <div className="flex items-center mb-5 max-md:mb-[15px] md:mx-5">
@@ -248,7 +248,7 @@ export default function Footer() {
             Политика и конфиденциальность
           </p>
         </Link>
-        <div
+        {/* <div
           className="absolute right-0 bottom-[30px] flex flex-col items-end cursor-pointer max-md:right-5"
           onClick={handleScrollToTop}
         >
@@ -258,7 +258,7 @@ export default function Footer() {
           <p className="mt-5 text-white  text-xs font-semibold">
             Сделано в UserTech
           </p>
-        </div>
+        </div> */}
       </div>
     </div>
   );

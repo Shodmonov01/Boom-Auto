@@ -9,6 +9,8 @@ const AboutContent = () => {
           <p className="text-white font-extrabold text-[20px] max-md:text-sm">
             Лет в автобизнесе
           </p>
+        {/* <img src="/g0.png" alt="img0" className="w-full" /> */}
+
         </div>
         <img src="/g1.png" alt="img1" className="w-full" />
       </div>

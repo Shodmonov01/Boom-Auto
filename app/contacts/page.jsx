@@ -99,8 +99,8 @@ const page = () => {
                 >
                   <span className="text-nowrap" ref={textRef}>
                     경기 수원시 권선구 권선로
-                  </span>{" "}
                   308-5 Южная Корея, г. Сувон
+                  </span>{" "}
                 </a>
               </div>
             </div>
@@ -157,8 +157,8 @@ const page = () => {
                   onChange={(e) => setPhone(e.target.value)}
                   className="h-[65px] max-md:h-[55px] w-full border border-white outline-none bg-transparent rounded-[5px] px-5 max-md:px-3 text-white placeholder-white"
                   placeholder="+8210-____-____"
-                  minLength={14}
-                  maxLength={14}
+                  minLength={13}
+                  maxLength={13}
                 />
                 <button
                   type="submit"

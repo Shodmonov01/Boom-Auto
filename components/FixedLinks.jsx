@@ -71,7 +71,7 @@ const FixedLinks = () => {
       </button>
       <a
         href="tel:+821080393003"
-        className={`bg-[#ff0000] mb-[10px] rounded-full flex items-center justify-center h-12 w-12 shadow-lg transition-transform ${
+        className={`bg-green-500 mb-[10px] rounded-full flex items-center justify-center h-12 w-12 shadow-lg transition-transform ${
           isOpen ? "translate-y-0" : "translate-y-[-50px]"
         }`}
       >

@@ -83,9 +83,9 @@ const Navbar = () => {
                 >
                   <CiLocationOn className="mr-3 text-lg mt-1" />
                   <span className="text-nowrap" ref={textRef}>
-                    경기 수원시 권선구 권선로&nbsp;
+                    경기 수원시 권선구 권선로&nbsp; Южная Корея, г. Сувон
                   </span>
-                  308-5 Южная Корея, г. Сувон
+                  {/* 308-5 Южная Корея, г. Сувон */}
                 </p>
                 {copied && (
                   <span className="absolute top-6 right-0 text-xs font-semibold bg-black rounded-sm p-1 text-white animate-fade">
