@@ -291,3 +291,10 @@ body {
     top: 50%;
     transform: translateY(-50%);
 }
+
+
+@media (max-width: 375px) {
+    .text-8px {
+        font-size: 9px !important;
+    }
+}
