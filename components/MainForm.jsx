@@ -26,23 +26,43 @@ const MainForm = () => {
     }
   };
 
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   setLoading(true);
+  //   setError(null);
+
+  //   try {
+  //     await api.post("contact/", { name, phone });
+  //     setSuccess(true);
+  //     setTimeout(() => {
+  //       setSuccess(false);
+  //     }, 2000);
+  //   } catch (err) {
+  //     setError("Ошибка при отправке формы. Пожалуйста, заполните все поля.");
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
     setError(null);
-
+    setSuccess(true); // Показать уведомление сразу после клика
+  
     try {
       await api.post("contact/", { name, phone });
-      setSuccess(true);
-      setTimeout(() => {
-        setSuccess(false);
-      }, 2000);
     } catch (err) {
       setError("Ошибка при отправке формы. Пожалуйста, заполните все поля.");
+      setSuccess(false); // Скрыть уведомление при ошибке
     } finally {
       setLoading(false);
+      setTimeout(() => {
+        setSuccess(false); // Скрыть уведомление после 2 секунд
+      }, 2000);
     }
   };
+  
 
   const textRef = useRef(null);
 
@@ -93,7 +113,7 @@ const MainForm = () => {
                 {loading ? "Отправка..." : "Оставить заявку"}
               </button>
               {success && (
-                <p className="text-green-500 text-center">Заявка отправлена!</p>
+                <p className="text-green-500 text-center">Спасибо! Ваша заявка успешно отправлена</p>
               )}
               <p className="text-[13px] mb-[50px] max-md:mb-[30px] text-center text-white font-semibold px-5 max-md:text-xs">
                 Нажимая на кнопку, вы даете согласие на обработку персональных
