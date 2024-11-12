@@ -99,6 +99,7 @@ const page = () => {
                 >
                   <span className="text-nowrap" ref={textRef}>
                     경기 수원시 권선구 권선로
+                    <br />
                   308-5 Южная Корея, г. Сувон
                   </span>{" "}
                 </a>

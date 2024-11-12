@@ -141,7 +141,9 @@ const MainForm = () => {
                   onClick={handleCopy}
                 >
                   <span className="text-nowrap" ref={textRef}>
-                    경기 수원시 권선구 권선로 Южная Корея, г. Сувон
+                    경기 수원시 권선구 권선로 
+                    <br />
+                    Южная Корея, г. Сувон
                   </span>{" "}
                   {/* 308-5 Южная Корея, г. Сувон */}
                 </a>

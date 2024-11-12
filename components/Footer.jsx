@@ -193,7 +193,10 @@ export default function Footer() {
                   )}
                   <p className="flex flex-col cursor-pointer">
                     <span className="text-nowrap" ref={textRef}>
-                      경기 수원시 권선구 권선로 308-5 Южная Корея, г. Сувон
+                      경기 수원시 권선구 권선로 308-5
+
+                      <br /> 
+                       Южная Корея, г. Сувон
                     </span>
                     {/* <span className="text-nowrap">Южная Корея, г. Сувон</span> */}
                   </p>
