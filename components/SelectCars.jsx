@@ -215,7 +215,7 @@ const SelectCars = ({
       </div>
 
       {/* District (Model) Select */}
-      <div className="flex flex-col md:px-[10px]  w-full max-md:w-full rounded-[10px] justify-between cursor-pointer md:mt-5 md:mb-8  max-md:ml-0">
+      <div className="flex flex-col md:px-[10px]  w-full max-md:w-full rounded-[10px] justify-between cursor-pointer  mt-0 mb-5 md:mt-5 md:mb-8  max-md:ml-0">
         <div className="flex flex-col w-full" ref={districtRef}>
           <div
             className={`md:h-10 w-full max-md:w-full rounded-[10px] justify-between cursor-pointer`}
@@ -277,7 +277,7 @@ const SelectCars = ({
       </div>
 
       {/* Generation Select */}
-      <div className="flex flex-col md:px-[10px]  w-full max-md:w-full rounded-[10px] justify-between cursor-pointer md:mt-5 md:mb-8  max-md:ml-0">
+      <div className="flex flex-col md:px-[10px]  w-full max-md:w-full rounded-[10px] justify-between cursor-pointer  mt-3 mb-5 md:mt-5 md:mb-8  max-md:ml-0">
         <div className="flex flex-col w-full" ref={generationRef}>
           <div
             className={`flex flex-col md:h-10 w-full max-md:w-full rounded-[10px] justify-between cursor-pointer`}
